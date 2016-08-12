@@ -3,6 +3,8 @@
 The following demo shows how to use a MySQL instance while running locally on your laptop and then use a MySQL instance in the cloud with
 Pivotal Cloud Foundry without code changes using Spring Cloud Connectors
 
+More Info - http://cloud.spring.io/spring-cloud-connectors/spring-cloud-connectors.html
+
 ![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/images/springboot-employee-1.png)
 
 <h3> Running Locally </h3>
