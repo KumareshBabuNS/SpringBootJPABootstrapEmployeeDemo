@@ -1,11 +1,11 @@
 <h1>SpringBoot JPA Bootstrap Employee Demo</h2>
 
 The following demo shows how to use a MySQL instance while running locally on your laptop and then use a MySQL instance in the cloud with
-Pivotal Cloud Foundry
+Pivotal Cloud Foundry without code changes using Spring Cloud Connectors
 
 ![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/images/springboot-employee-1.png)
 
-<h3> Running Locally <h3>
+<h3> Running Locally </h3>
 
 - Create a file called "spring-cloud-mysql.properties" with details to you local MySQL instance on your network/laptop/PC etc
 
