@@ -7,7 +7,7 @@ applications:
   timeout: 180
   path: ./target/springbootjpabootstrapemployeedemo-0.0.1-SNAPSHOT.jar
   services:
-    - mysql-dev
+    - apples-mysql
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urando
     SPRING_PROFILES_ACTIVE: cloud

@@ -1,27 +1,24 @@
 <h1>SpringBoot JPA Bootstrap Employee Demo</h2>
 
-The following demo shows how to use a MySQL instance while running locally on your laptop and then use a MySQL instance in the cloud with
-Pivotal Cloud Foundry without code changes using Spring Cloud Connectors
-
-More Info - http://cloud.spring.io/spring-cloud-connectors/spring-cloud-connectors.html
+The following demo shows how to use a H2 database while developing locally and then how to swicth to a MySQl 
+bound service instance in Pivotal Cloud Foundry
 
 ![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/images/springboot-employee-1.png)
 
 <h3> Running Locally </h3>
 
-- Create a file called "spring-cloud-mysql.properties" with details to you local MySQL instance on your network/laptop/PC etc
+- Clone and package as follows
 
 ```
-spring.cloud.appId: SpringBootMYSQLLocal
-spring.cloud.database: mysql://pas:pas@localhost:3306/apples
-spring.datasource.max-active: 5
-spring.datasource.initial-size: 1
+$ git clone https://github.com/papicella/SpringBootJPABootstrapEmployeeDemo.git
+$ mvn package
 ```
 
-- Reference the file location in "resources/spring-cloud-bootstrap.properties" a shown below
+- Run as follows
 
 ```
-spring.cloud.propertiesFile: /Users/pasapicella/springboot/spring-cloud-mysql.properties
+$ mvn spring-boot:run
+
 ```
 
 <h3> Push to Pivotal Cloud Foundry </h3>
@@ -32,7 +29,7 @@ spring.cloud.propertiesFile: /Users/pasapicella/springboot/spring-cloud-mysql.pr
 $ cf create-service cleardb spark apples-mysql
 ```
 
-- Push using manifest.yml as follows  ensuring you use the correct MySQL service name
+- Push using manifest.yml as follows ensuring you use the correct MySQL service name
 
 ```
 ---
@@ -44,7 +41,16 @@ applications:
   timeout: 180
   path: ./target/springbootjpabootstrapemployeedemo-0.0.1-SNAPSHOT.jar
   services:
-    - mysql-dev
+    - apples-mysql
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urando
+    SPRING_PROFILES_ACTIVE: cloud
+```
+
+- Deploy to PCF
+
+```
+$ cf push 
 ```
 
 <hr />
