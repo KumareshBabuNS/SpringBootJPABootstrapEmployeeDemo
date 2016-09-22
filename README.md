@@ -4,7 +4,7 @@ The following demo shows how to use a H2 database while developing locally and t
 bound service instance in Pivotal Cloud Foundry. The blog entry below does into detail on how this works as
 well as how to enable the H2 web console in DEV mode.
 
-
+http://theblasfrompas.blogspot.com.au/2016/09/using-h2-console-in-development-with.html
 
 ![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/images/springboot-employee-1.png)
 
