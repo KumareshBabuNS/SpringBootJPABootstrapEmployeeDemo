@@ -1,7 +1,10 @@
 <h1>SpringBoot JPA Bootstrap Employee Demo</h2>
 
-The following demo shows how to use a H2 database while developing locally and then how to swicth to a MySQl 
-bound service instance in Pivotal Cloud Foundry
+The following demo shows how to use a H2 database while developing locally and then how to switch to a MySQl 
+bound service instance in Pivotal Cloud Foundry. The blog entry below does into detail on how this works as
+well as how to enable the H2 web console in DEV mode.
+
+
 
 ![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/images/springboot-employee-1.png)
 
