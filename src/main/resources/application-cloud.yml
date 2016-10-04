@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: springboot-employee-service
   jpa:
     hibernate:
       ddl-auto: create
@@ -7,3 +9,13 @@ server:
   error:
     whitelabel:
       enabled: false
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
+
